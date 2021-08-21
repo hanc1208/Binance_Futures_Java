@@ -32,7 +32,6 @@ class RestApiRequestImpl {
     }
 
     private Request createRequestByGet(String address, UrlParamsBuilder builder) {
-        System.out.println(serverUrl);
         return createRequestByGet(serverUrl, address, builder);
     }
 
