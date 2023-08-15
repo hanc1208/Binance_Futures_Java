@@ -960,7 +960,7 @@ class RestApiRequestImpl {
     RestApiRequest<AccountInformation> getAccountInformation() {
         RestApiRequest<AccountInformation> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build();
-        request.request = createRequestByGetWithSignature("/fapi/v1/account", builder);
+        request.request = createRequestByGetWithSignature("/fapi/v2/account", builder);
 
         request.jsonParser = (jsonWrapper -> {
             AccountInformation result = new AccountInformation();
@@ -1041,7 +1041,7 @@ class RestApiRequestImpl {
     RestApiRequest<List<PositionRisk>> getPositionRisk() {
         RestApiRequest<List<PositionRisk>> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build();
-        request.request = createRequestByGetWithSignature("/fapi/v1/positionRisk", builder);
+        request.request = createRequestByGetWithSignature("/fapi/v2/positionRisk", builder);
 
         request.jsonParser = (jsonWrapper -> {
             List<PositionRisk> result = new LinkedList<>();
