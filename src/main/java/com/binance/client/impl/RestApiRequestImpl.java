@@ -944,7 +944,7 @@ class RestApiRequestImpl {
 
         request.jsonParser = (jsonWrapper -> {
             List<AccountBalance> result = new LinkedList<>();
-            JSONArray dataArray = (JSONArray) jsonWrapper.getJson();
+            JsonWrapperArray dataArray = jsonWrapper.getJsonArray("data");
             dataArray.forEach((item) -> {
                 AccountBalance element = new AccountBalance();
                 element.setAsset(item.getString("asset"));
